@@ -76,26 +76,26 @@ ul {
   position: relative;
 }
 
-li {
+td {
   position: relative;
   list-style: none;
   padding: 15px;
   border-bottom: #eee solid 1px;
 }
 
-li .text {
+td .text {
   margin-left: 10px;
 }
 
-li.checked {
+td.checked {
   color: #888;
 }
 
-li.checked .text {
+td.checked .text {
   text-decoration: line-through;
 }
 
-li.private {
+td.private {
   background: #eee;
   border-color: #ddd;
 }
@@ -109,7 +109,7 @@ header .hide-completed {
 }
 
 @media (max-width: 600px) {
-  li {
+  td {
     padding: 12px 15px;
   }
 
@@ -123,3 +123,6 @@ header .hide-completed {
   }
 }
 
+table {
+  width: 100%;
+}

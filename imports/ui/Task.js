@@ -21,7 +21,7 @@ export default class Task extends Component {
     const taskClassName = this.props.task.checked ? 'checked' : '';
 
     return (
-      <li className={taskClassName}>
+      <td className={taskClassName}>
         <button className="delete" onClick={this.deleteThisTask.bind(this)}>
           &times;
         </button>
@@ -34,7 +34,7 @@ export default class Task extends Component {
         />
  
         <span className="text">{this.props.task.text}</span>
-      </li>
+      </td>
     );
   }
 }

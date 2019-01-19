@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Tasks } from '../api/tasks.js';
 import Task from './Task.js';
 
- // App component - represents the whole app
+// App component - represents the whole app
 class App extends Component {
   constructor(props) {
     super(props);
@@ -56,27 +56,23 @@ class App extends Component {
             <h1>Todo List ({this.props.incompleteCount})</h1>
 
             <label className="hide-completed">
-              <input
-                type="checkbox"
-                readOnly
-                checked={this.state.hideCompleted}
-                onClick={this.toggleHideCompleted.bind(this)}
-              />
+              <input type="checkbox" readOnly checked={this.state.hideCompleted} onClick={this.toggleHideCompleted.bind(this)}/>
               Hide Completed Tasks
             </label>
 
-            <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
-              <input
-                type="text"
-                ref="textInput"
-                placeholder="Type to add new tasks"
-              />
+            <form className="new-task" onSubmit={this.handleSubmit.bind(this)}>
+              <input type="text" ref="textInput" placeholder="Type to add new tasks"/>
             </form>
           </header>
 
-          <ul>
-            {this.renderTasks()}
-          </ul>
+          <table>
+            <tr>
+              <th>Task</th>
+            </tr>
+            <tr>
+              {this.renderTasks()}
+            </tr>
+          </table>
         </div>
     );
   }

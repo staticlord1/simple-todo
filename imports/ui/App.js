@@ -66,12 +66,14 @@ class App extends Component {
           </header>
 
           <table>
-            <tr>
-              <th>Task</th>
-            </tr>
-            <tr>
+            <thead>
+              <tr>
+                <th>Task</th>
+              </tr>
+            </thead>
+            <tbody>
               {this.renderTasks()}
-            </tr>
+            </tbody>
           </table>
         </div>
     );

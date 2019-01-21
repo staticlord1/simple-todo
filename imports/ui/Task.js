@@ -21,20 +21,27 @@ export default class Task extends Component {
     const taskClassName = this.props.task.checked ? 'checked' : '';
 
     return (
-      <td className={taskClassName}>
-        <button className="delete" onClick={this.deleteThisTask.bind(this)}>
-          &times;
-        </button>
- 
+      <tr>
+        <td>
         <input
-          type="checkbox"
-          readOnly
-          checked={!!this.props.task.checked}
-          onClick={this.toggleChecked.bind(this)}
-        />
- 
-        <span className="text">{this.props.task.text}</span>
-      </td>
+            type="checkbox"
+            readOnly
+            checked={!!this.props.task.checked}
+            onClick={this.toggleChecked.bind(this)}
+          />
+        </td>
+        <td className={taskClassName}>
+          <span className="text">{this.props.task.createdAt.toISOString().split("T")[0]}</span>
+        </td>
+        <td className={taskClassName}>
+          <span className="text">{this.props.task.text}</span>
+        </td>
+        <td className="delete">
+        <button className="delete" onClick={this.deleteThisTask.bind(this)}>
+            &times;
+          </button>
+        </td>
+      </tr>
     );
   }
 }

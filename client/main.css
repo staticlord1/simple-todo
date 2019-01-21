@@ -112,12 +112,12 @@ header .hide-completed {
   td {
     padding: 12px 15px;
   }
-
+  
   .search {
     width: 150px;
     clear: both;
   }
-
+  
   .new-task input {
     padding-bottom: 5px;
   }
@@ -125,4 +125,8 @@ header .hide-completed {
 
 table {
   width: 100%;
+}
+
+tr {
+  display: inline;
 }

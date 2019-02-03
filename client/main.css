@@ -128,5 +128,13 @@ table {
 }
 
 tr {
-  display: inline;
+  display: inline-table;
+}
+
+td {
+  width: 25%;
+}
+
+tbody {
+  display: grid;
 }
